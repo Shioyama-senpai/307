@@ -1,0 +1,15 @@
+<h1>Statistiken</h1>
+<div>
+	<select id="stat-select">
+		<option value="visits_per_person">Besuche pro Person</option>
+		<option value="long_time_no_see">Lange nicht mehr gesehen</option>
+	</select>
+</div>
+
+<div class="loading-container" id="loading-container" style="display: none;">
+	<img src="app/client/view/resources/images/Loading.webp" class="loading-indicator">
+</div>
+
+<div class="stat-list" id="stat-list"></div>
+
+<script src="app/client/presentation/StatsController.js"></script>

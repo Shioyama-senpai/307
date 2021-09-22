@@ -1,0 +1,73 @@
+form label {
+	display: block;
+	margin-bottom: 0.2em;
+}
+
+.filter-bar {
+	margin-bottom: 2em;
+}
+
+#add-visit-button {
+	float: right;
+}
+
+.names-box {
+	border-radius: 0.45em;
+	padding: 0.25em;
+	padding-left: 0.5em;
+	border: none;
+	background-color: #FFFFFF;
+	box-shadow: 0.05em 0.2em 0.55em rgba(0, 0, 0, 0.3);
+	text-decoration: none;
+	font-weight: normal;
+	color: #000000;
+	font-size: 0.8em;
+	box-sizing: border-box;
+}
+
+.names-box input[list] {
+	box-shadow: none;
+	padding-left: 0;
+	border: none;
+}
+
+.names-box input:focus {
+	outline: none;
+}
+
+.name-token {
+	display: inline-block;
+	padding: 0.4em;
+	border-radius: 0.4em;
+	background-color: rgba(0, 0, 0, 0.1);
+	margin-right: 0.5em;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+.name-token:after {
+	display: inline-block;
+	margin-left: 0.5em;
+	content: "×";
+	font-size: 1.5em;
+	line-height: 0.8em;
+}
+
+.meal-row {
+	margin-bottom: 0.3em;
+}
+
+.meal-row * {
+	margin-right: 0.3em;
+}
+
+.loading-container {
+	text-align: center;
+}
+
+@media (max-width: 750px) {
+	#add-visit-button {
+		float: unset;
+		margin-bottom: 3em;
+	}
+}

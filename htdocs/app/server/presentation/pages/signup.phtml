@@ -1,0 +1,13 @@
+<h1>Registrieren</h1>
+<form id="signup-form">
+	<input type="email" name="email" placeholder="E-Mail-Adresse" required="true" id="email-field" maxlength="500" class="mobile-full-width">
+	<input type="password" name="password" placeholder="Passwort" required="true" id="password-field" maxlength="500" class="mobile-full-width">
+	<button type="submit" class="default mobile-full-width" id="signup-button">Registrieren</button>
+	<img src="app/client/view/resources/images/Loading.webp" id="loading-indicator" class="loading-indicator" style="display: none;">
+	<br>
+	<span class="error-box" id="error-box" style="display: none; margin-top: 1em;"></span>
+</form>
+<p class="login-footer">Wenn du bereits ein Konto hast kannst du dich <a href="login.php" class="button">hier anmelden ❯</a></p>
+<p class="login-footer">Durch die Registration wird ein Cookie gespeichert. Mehr Informationen findest du unter <a href="privacy.php">Datenschutz</a>.</p>
+
+<script src="app/client/presentation/SignupController.js"></script>

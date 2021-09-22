@@ -1,0 +1,39 @@
+<div id="profile-view">
+	<h1>Mein Profil</h1>
+	<p id="email-label"><?php echo UserRepository::getSessionUser()["email"]; ?></p>
+	<button id="change-email-button" class="mobile-full-width">E-Mail-Adresse ändern</button>
+	<button id="change-password-button" class="mobile-full-width">Passwort ändern</button>
+	<a href="app/server/service/logout.php" class="button destructive mobile-full-width" style="text-align: center;">Abmelden</a>
+	<br><br>
+	<div class="success-box" id="success-box" style="display: none;"></div>
+</div>
+<div id="logout-view" style="display: none;">
+	<h1>Abmelden ...</h1>
+</div>
+<div id="modal-container" class="modal-container">
+	<div id="change-email-view" class="modal-view">
+		<h1>E-Mail-Adresse ändern</h1>
+		<form id="change-email-form">
+			<input type="email" id="change-email-old-email-field" placeholder="Alte E-Mail-Adresse" required="true" maxlength="500" class="mobile-full-width">
+			<input type="email" id="change-email-new-email-field" placeholder="Neue E-Mail-Adresse" required="true" maxlength="500" class="mobile-full-width">
+			<input type="password" id="change-email-password-field" placeholder="Passwort" required="true" maxlength="500" class="mobile-full-width">
+			<button type="submit" id="change-email-submit-button" class="default mobile-full-width">Speichern</button>
+			<img src="app/client/view/resources/images/Loading.webp" id="change-email-loading-indicator" class="loading-indicator" style="display: none;">
+			<div class="error-box" id="change-email-error-box" style="display: none; margin-top: 1em;"></div>
+		</form>
+	</div>
+	<div id="change-password-view" class="modal-view">
+		<h1>Passwort ändern</h1>
+		<form id="change-password-form">
+			<input type="password" id="change-password-old-password-field" placeholder="Altes Passwort" required="true" maxlength="500" class="mobile-full-width">
+			<input type="password" id="change-password-new-password-field" placeholder="Neues Passwort" required="true" maxlength="500" class="mobile-full-width">
+			<input type="email" id="change-password-email-field" placeholder="E-Mail-Adresse" required="true" maxlength="500" class="mobile-full-width">
+			<button type="submit" id="change-password-submit-button" class="default mobile-full-width">Speichern</button>
+			<img src="app/client/view/resources/images/Loading.webp" id="change-password-loading-indicator" class="loading-indicator" style="display: none;">
+			<div class="error-box" id="change-password-error-box" style="display: none; margin-top: 1em;"></div>
+		</form>
+	</div>
+	<div class="vertical-centerer"></div>
+</div>
+
+<script src="app/client/presentation/ProfileController.js"></script>

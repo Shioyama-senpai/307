@@ -1,0 +1,60 @@
+<link rel="stylesheet" type="text/css" href="/app/client/view/style/visits.css">
+
+<h1>Besuche</h1>
+
+<div class="filter-bar">
+	<button class="creative mobile-full-width" id="add-visit-button">Besuch erfassen</button>
+	<label for="name-select">Anzeigen:</label>
+	<select id="name-select">
+		<option value="">(Alle)</option>
+	</select>
+</div>
+
+<div class="loading-container" id="loading-container" style="display: none;">
+	<img src="app/client/view/resources/images/Loading.webp" class="loading-indicator">
+</div>
+
+<div class="visit-list" id="visits-container"></div>
+
+<div class="modal-container" id="modal-container">
+	<div class="modal-view visible" id="visit-view">
+		<form id="visit-form">
+			<select id="visit-type-select" class="mobile-full-width" required="true" style="margin-bottom: 1em;">
+				<option value="1" title="Der Besuch kam hierher">Besuch von:</option>
+				<option value="2" title="Der Besuch fand dort statt">Zu Besuch bei:</option>
+				<option value="3" title="Es fand auswärts ein Treffen statt">Auswärts getroffen mit:</option>
+			</select>
+			<div class="names-box" id="names-box">
+				<input type="text" id="new-name-field" list="name-list" placeholder="Name" maxlength="500">
+			</div>
+
+			<label for="date-field">Datum:</label>
+			<input type="date" id="date-field" value="<?php echo date("Y-m-d"); ?>" required="true">
+
+			<label for="visit-purpose-field">Anlass:</label>
+			<input type="text" id="visit-purpose-field" class="mobile-full-width" required="true" maxlength="500" list="purpose-list">
+
+			<label>Servierte Gerichte:</label>
+			<div id="served-meals-container"></div>
+			<button type="button" id="add-meal-button">+ Hinzufügen</button>
+
+			<label for="brought-items-field">Mitgebrachtes:</label>
+			<textarea id="brought-items-field" placeholder="(optional)"></textarea>
+
+			<label for="description-field">Sonstiges:</label>
+			<textarea id="description-field" placeholder="(optional)"></textarea>
+			<br><br>
+			<button type="submit" id="save-button" class="default">Speichern</button>
+			<button type="button" id="delete-button" class="destructive" style="float: right;">Löschen</button>
+			<div class="error-box" id="error-box" style="display: none;"></div>
+		</form>
+	</div>
+	<div class="vertical-centerer"></div>
+</div>
+
+<datalist id="name-list"></datalist>
+<datalist id="purpose-list"></datalist>
+<datalist id="meal-type-list"></datalist>
+<datalist id="meal-list"></datalist>
+
+<script src="app/client/presentation/VisitsController.js"></script>

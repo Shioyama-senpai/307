@@ -1,0 +1,102 @@
+:root {
+	--design-color: #6060DE;
+}
+
+* {
+	font-family: sans-serif;
+}
+
+input, select, textarea, button, .button, input[type="submit"] {
+	border-radius: 0.45em;
+	padding: 0.45em;
+	padding-left: 0.9em;
+	padding-right: 0.9em;
+	border: none;
+	background-color: #FFFFFF;
+	box-shadow: 0.05em 0.2em 0.55em rgba(0, 0, 0, 0.3);
+	text-decoration: none;
+	font-weight: normal;
+	color: #000000;
+	font-size: 0.9em;
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+input:not([type="submit"]):not([type="date"]), select {
+	width: 15em;
+}
+
+textarea {
+	width: 100%;
+}
+
+button, .button, input[type="submit"] {
+	cursor: default;
+}
+
+button:active, .button:active, input[type="submit"]:active {
+	filter: brightness(0.85);
+}
+
+button.default, .button.default, input[type="submit"].default {
+	background-color: var(--design-color);
+	color: #FFFFFF;
+}
+
+button.creative, .button.creative, input[type="submit"].creative {
+	background-color: #45AB45;
+	color: #FFFFFF;
+}
+
+button.destructive, .button.destructive, input[type="submit"].destructive {
+	background-color: #DE2323;
+	color: #FFFFFF;
+}
+
+select, input[type="text"][list] {
+	border-right: 22px solid var(--design-color);
+}
+
+h1 {
+	margin-top: 0;
+}
+
+form label {
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.error-box, .success-box {
+	padding: 12px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #FFFFFF;
+	display: inline-block;
+	border-radius: 8px;
+	box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.error-box {
+	background-color: #DE8989;
+}
+
+.success-box {
+	background-color: #57B357;
+}
+
+.loading-indicator {
+	height: 27px;
+	vertical-align: middle;
+}
+
+.modal-container {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-view {
+	padding: 1.5em;
+	border-radius: 0.8em;
+	box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
+	background-color: #FFFFFF;
+}
