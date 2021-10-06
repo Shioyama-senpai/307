@@ -618,6 +618,8 @@ class VisitsController {
 			this.visitId = visit.visit_id;
 		}
 
+		this.visitTypeSelect.value = visit.visit_type;
+
 		var names = visit.name.replaceAll("  ", " ").replaceAll(" + ", ",").replaceAll("+", ",").replaceAll(" & ", ",").replaceAll("&", ",").replaceAll(", ", ",").split(",");
 		while (this.namesBox.children.length > 1) {
 			this.namesBox.removeChild(this.namesBox.firstChild);
